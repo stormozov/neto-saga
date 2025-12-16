@@ -1,0 +1,75 @@
+:root {
+  --layout-block-padding-y: 0.8rem;
+
+  --border-radius-main: 4px;
+
+  --bg-color-primary: #242424;
+  --block-bg-primary: #2c2c2c;
+
+  --button-color-primary: #ff4d4d;
+  --button-color-primary-hover: #e04242;
+}
+
+:root {
+  background-color: var(--bg-color-primary);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+button {
+  transition: 0.3s;
+}
+
+a {
+  font-weight: 500;
+  color: var(--button-color-primary);
+  text-decoration: inherit;
+
+  &:hover {
+    color: var(--button-color-primary-hover);
+  }
+}
+
+button {
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.container {
+  padding: 0 2em;
+}

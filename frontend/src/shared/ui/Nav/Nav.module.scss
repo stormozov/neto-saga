@@ -1,0 +1,33 @@
+.nav {
+  $textColor: #ffffff;
+  font-size: 1rem;
+
+  &__list {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: var(--button-tertiary-bg);
+    border-radius: 4px;
+    color: $textColor;
+
+    &:hover {
+      background-color: var(--button-tertiary-hover);
+      color: $textColor;
+    }
+
+    &--active {
+      background-color: var(--button-primary-bg);
+      color: $textColor;
+
+      &:hover {
+        background-color: var(--button-primary-bg);
+        color: $textColor;
+        cursor: default;
+      }
+    }
+  }
+}
