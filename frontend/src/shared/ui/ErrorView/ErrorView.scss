@@ -1,0 +1,44 @@
+.error-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1.5em;
+
+  font-size: 1rem;
+
+  &__content {
+    padding: 1em 2em;
+
+    width: 100%;
+
+    background-color: rgba($color: #ff4d4d, $alpha: 0.1);
+    border: 1px solid rgba($color: #ff4d4d, $alpha: 0.3);
+    border-radius: var(--border-radius-main);
+
+    text-align: center;
+  }
+
+  &__icon {
+    font-size: 3em;
+    color: var(--danger-color);
+  }
+
+  &__message {
+    color: #8a8a8a;
+  }
+
+  &__button {
+    margin: 2em auto 0;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      svg {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

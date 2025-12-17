@@ -1,0 +1,33 @@
+.list {
+  --item-padding: 0.5em 1em;
+
+  display: grid;
+  gap: 0.4em;
+
+  margin-top: 1em;
+
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+
+  padding: var(--item-padding);
+
+  border: 1px solid #7c7c7c;
+  border-radius: var(--border-radius-main);
+
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    --item-padding: 0.5em 1.5em;
+    
+    background-color: #7c7c7c;
+    color: #ffffff;
+  }
+
+}

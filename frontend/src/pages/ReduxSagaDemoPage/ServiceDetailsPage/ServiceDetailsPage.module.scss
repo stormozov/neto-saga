@@ -1,0 +1,21 @@
+.service {
+  font-size: 1rem;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__label {
+    font-style: italic;
+    color: #888888;
+  }
+
+  &__details {
+    margin: 2em 0;
+  }
+
+  &__back {
+    margin: 0 auto;
+    width: max-content;
+  }
+}

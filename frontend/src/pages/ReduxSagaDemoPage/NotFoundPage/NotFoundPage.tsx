@@ -10,7 +10,7 @@ export default function NotFoundPage() {
 		<div className={styles["not-found-page"]}>
 			<h1 className={styles.title}>404</h1>
 			<p className={styles.text}>Страница не найдена</p>
-			<Link to="/" className={styles.link}>
+			<Link to="/" className="with-icon">
 				<FaHome />
 				На главную
 			</Link>
@@ -18,7 +18,7 @@ export default function NotFoundPage() {
 				to="https://github.com/stormozov/neto-saga/issues/new"
 				target="_blank"
 				rel="noreferrer"
-				className={styles.link}
+				className="with-icon"
 			>
 				<FaBug />
 				Сообщить об ошибке

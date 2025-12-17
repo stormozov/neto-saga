@@ -8,6 +8,13 @@
 
   --button-color-primary: #ff4d4d;
   --button-color-primary-hover: #e04242;
+  --button-color-secondary: #727272;
+  --button-color-tertiary: #ffffff;
+
+  --danger-color: #ff4d4d;
+  --danger-color-hover: #e04242;
+  --success-color: #4d9f4d;
+  --success-color-hover: #3d883d;
 }
 
 :root {
@@ -40,6 +47,12 @@ a {
   font-weight: 500;
   color: var(--button-color-primary);
   text-decoration: inherit;
+
+  &.with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
 
   &:hover {
     color: var(--button-color-primary-hover);

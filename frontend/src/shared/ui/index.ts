@@ -1,6 +1,5 @@
 export * from "./Button";
-export * from "./CopyLinkButton";
+export * from "./ErrorView";
 export * from "./Input";
 export * from "./LoadingFallback";
-export * from "./Nav";
 

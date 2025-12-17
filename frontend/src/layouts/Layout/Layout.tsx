@@ -1,7 +1,7 @@
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 import { Main } from "../Main";
-import styles from "./HomePageLayout.module.scss";
+import styles from "./Layout.module.scss";
 
 /**
  * Основной компонент макета приложения (Layout).
@@ -10,7 +10,7 @@ import styles from "./HomePageLayout.module.scss";
  * содержимое (Main) и нижний колонтитул (Footer). Используется как обёртка для
  * всех страниц приложения, обеспечивая единое оформление и навигацию.
  */
-export default function HomePageLayout() {
+export default function Layout() {
 	return (
 		<div className={styles.layout}>
 			<Header />

@@ -58,8 +58,8 @@
 
   // Importance
   &--importance-primary {
-    --importance-bg: var(--button-primary-bg);
-    --importance-hover-bg: var(--button-primary-hover);
+    --importance-bg: var(--success-color);
+    --importance-hover-bg: var(--success-color-hover);
     --importance-border: var(--button-primary-bg);
     --importance-color: #ffffff;
   }

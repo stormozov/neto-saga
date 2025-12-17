@@ -1,4 +1,4 @@
-import { getCurrentYear } from "@/shared/utils";
+import { getCurrentYear } from "@/shared/utils/dataUtils";
 import styles from "./Footer.module.scss";
 
 /**
