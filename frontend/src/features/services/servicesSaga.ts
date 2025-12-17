@@ -12,7 +12,13 @@ import {
 import type { IServiceDetails, IServiceItem } from "./types";
 
 /** Базовый URL API */
-const API_BASE_URL = "http://localhost:7070/api/services";
+const LOCAL_API_BASE_URL = "http://localhost:7070/api/services";
+
+/** URL API на платформе Render */
+const RENDER_API_BASE_URL = "https://neto-saga-services.onrender.com/api/services";
+
+/** Базовый URL API */
+const API_BASE_URL = RENDER_API_BASE_URL || LOCAL_API_BASE_URL;
 
 /**
  * Сага для загрузки списка услуг.
