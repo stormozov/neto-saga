@@ -26,12 +26,17 @@ jobs:
         with:
           node-version: "20"
           cache: "yarn"
+          cache-dependency-path: frontend/yarn.lock
 
-      - name: Install dependencies
-        run: yarn install --immutable --check-cache
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          yarn install --immutable --check-cache
 
       - name: Run linter
-        run: yarn lint
+        run: |
+          cd frontend
+          yarn lint
 
   deploy:
     needs: lint
@@ -48,14 +53,18 @@ jobs:
         with:
           node-version: "20"
           cache: "yarn"
+          cache-dependency-path: frontend/yarn.lock
 
-      - name: Install dependencies
-        run: yarn install --immutable --check-cache
-
-      - name: Build
+      - name: Install frontend dependencies
         run: |
-          cd client
+          cd frontend
+          yarn install --immutable --check-cache
+
+      - name: Build frontend
+        run: |
+          cd frontend
           yarn build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
