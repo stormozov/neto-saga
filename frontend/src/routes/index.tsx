@@ -15,25 +15,30 @@ const NotFound = lazy(
 	() => import("@pages/ReduxSagaDemoPage/NotFoundPage/NotFoundPage"),
 );
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: withSuspense(Layout),
-		children: [
-			{
-				index: true,
-				element: withSuspense(Homepage),
-			},
-			{
-				path: "/:id/details",
-				element: withSuspense(ServiceDetailsPage),
-			},
-			{
-				path: "*",
-				element: withSuspense(NotFound),
-			},
-		],
-	},
-]);
+const basename: string = import.meta.env.VITE_BASENAME;
+
+const router = createBrowserRouter(
+	[
+		{
+			path: "/",
+			element: withSuspense(Layout),
+			children: [
+				{
+					index: true,
+					element: withSuspense(Homepage),
+				},
+				{
+					path: "/:id/details",
+					element: withSuspense(ServiceDetailsPage),
+				},
+				{
+					path: "*",
+					element: withSuspense(NotFound),
+				},
+			],
+		},
+	],
+	{ basename },
+);
 
 export default router;

@@ -59,6 +59,12 @@ jobs:
         run: |
           cd frontend
           yarn install --immutable --check-cache
+      
+      - name: Create .env file
+        run: |
+          cd frontend
+          echo "VITE_API_BASE_URL=${{ secrets.VITE_API_BASE_URL }}" >> .env
+          echo "VITE_BASENAME=${{ vars.VITE_BASENAME }}" >> .env
 
       - name: Build frontend
         run: |
